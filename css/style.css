@@ -268,18 +268,17 @@ nav .menu li{
     gap: 40px;
     max-width:1200px;
     width:90%;
-    height: 783px;
     margin: 0 auto;
     
 }
 .choose-box{
-    max-width: 400px;
-    width: 100%;
+    /* max-width: 400px;
+    max-width: none; */
     background: #351165;
     border-radius: 40px;
     text-align: left;
-    padding-left: 40px;
-    padding-right: 40px;
+    overflow:hidden;
+    padding:40px;
     
 }
 .big-layout{
@@ -299,7 +298,7 @@ nav .menu li{
     
 }
 .choose-box img{
-    padding-top: 40px;
+    /* padding-top: 40px; */
     width: 60px;
     height: 60px;
     margin-bottom: 16px;
@@ -542,12 +541,17 @@ nav .menu li{
     
     background-color:#351165;
     margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
+    display:flex;
     align-items:center;
+    gap:30px;
     gap:24px;
     border-radius:40px;
+    padding:40px;
     margin-bottom: 120px;
+}
+
+.host-image{
+    flex-shrink:0;
 }
 
 .host-image img{ 
@@ -556,17 +560,16 @@ nav .menu li{
     height:200px;
     object-fit:cover;
     border-radius:50%;
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-bottom: 40px;
+    
 }
 
 .host-meet-content{
     padding-bottom: 40px;
-    
+    flex:1;   
 }
 
 .host-meet-content h3{
+    margin-bottom:15px;
     color:#fff;
     font-size:32px;
     font-weight: 700;
@@ -575,11 +578,13 @@ nav .menu li{
 }
 
 .host-meet-content p{
+    margin-top:10px;
     padding-right: 40px;
     color:#FFFFFF;
     opacity: 60%;
     font-size:16px;
     padding-top: 16px;
+    
     
 }
 
@@ -807,7 +812,7 @@ nav .menu li{
     }
 
     /* meet the host responsive */
-    host-title{
+    .host-title{
         color:#FFFFFF;
         font-size:32px;
         font-weight:700;
@@ -815,26 +820,54 @@ nav .menu li{
     }
     .host-card{
         /* corrected */
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto;
-
-        max-width:400px;
-        display:grid;
+        /* flex-direction:column; */
+        display:flex;
+        flex-direction:column;
         align-items:center;
+        text-align:center;
+        max-width:90%;
+        
+        padding: 24px;
         gap:24px;
         border-radius:40px;
         margin-bottom: 120px;
     }
+    /* .host-image{
+         display:flex;
+        justify-content:center;
+        align-items:center;
+    } */
     .host-image img{ 
         /* corrected */
         width:150px;
         height:150px;
         object-fit:cover;
         border-radius:50%;
-        padding-top: 24px;
-        padding-left: 125px;
-        padding-bottom: 125px;
+        /* padding-top: 24px; */
+        /* padding-left: 125px;
+        padding-bottom: 125px; */
+    }
+    /* -------------- */
+    .host-meet-content{
+        padding: 0 10px 24px;
+        text-align: center;
+        flex:1;
+        
+    }
+
+    .host-meet-content h3{
+        font-size: 24px;
+        padding-top: 0;
+    }
+
+    .host-meet-content p{
+        padding-right: 0;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .social-icons{
+        justify-content: center;
     }
     
 
