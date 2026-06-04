@@ -37,6 +37,19 @@ body{
     -webkit-text-fill-color: transparent;
     
 }
+#nav-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+
+
 nav .menu{
     display: flex;
     list-style:none;
@@ -272,8 +285,6 @@ nav .menu li{
     
 }
 .choose-box{
-    /* max-width: 400px;
-    max-width: none; */
     background: #351165;
     border-radius: 40px;
     text-align: left;
@@ -298,7 +309,6 @@ nav .menu li{
     
 }
 .choose-box img{
-    /* padding-top: 40px; */
     width: 60px;
     height: 60px;
     margin-bottom: 16px;
@@ -317,16 +327,7 @@ nav .menu li{
     opacity: 60%;
 }
 /* featchered episodes styling */
-.Featured-section{
-    max-width:1600px;
-    width:100%;
-    height: 1276px;
-    background: #230E3D;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 120px;
-         
-}
+
 .Featured-content h1{
     padding-bottom: 40px;
     text-align: center;
@@ -340,7 +341,9 @@ nav .menu li{
     display: flex;
     justify-content: center;
     gap: 40px;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+
     height: 538px;
     margin: 0 auto;
     
@@ -538,7 +541,7 @@ nav .menu li{
 .host-card{
     /* corrected */
     max-width:1200px;
-    width:85%;
+    width:70%;
     
     background-color:#351165;
     margin:0 auto;
@@ -575,7 +578,7 @@ nav .menu li{
     font-size:32px;
     font-weight: 700;
     padding-top: 48.5px;
-    /* margin-bottom:15px; */
+    
 }
 
 .host-meet-content p{
@@ -690,6 +693,8 @@ nav .menu li{
     font-weight:500;
 }
 
+
+
 @media screen and (max-width:576px){
     .navber{
         height: 60px;
@@ -701,6 +706,45 @@ nav .menu li{
         padding: 20px 16px;
         font-size: 32px;
     }
+    .hamburger{
+        display:block;
+        z-index:1000;
+    }
+
+    .menu{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+
+        background:#1A0B2E;
+
+        padding:30px 0;
+
+        transform:translateY(-150%);
+        transition:0.4s ease;
+    }
+
+    .menu li{
+        list-style:none;
+    }
+
+    .menu li a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:600;
+    }
+
+    #nav-toggle:checked ~ .menu{
+        transform:translateY(0);
+    }
+
     nav .menu{
         display:none;
     }
@@ -802,7 +846,12 @@ nav .menu li{
     .video-cards-contaier{
         grid-template-columns: 1fr;
         justify-content: center;
+        width: 100%;
+       
         
+    }
+    .card{
+         max-width: 400px;
     }
    
     .video-box iframe{
@@ -825,27 +874,21 @@ nav .menu li{
         flex-direction:column;
         align-items:center;
         text-align:center;
-        max-width:80%;
+        max-width:400px;
+        width: 100%;
         
         padding: 24px;
         gap:24px;
         border-radius:40px;
         margin-bottom: 120px;
     }
-    /* .host-image{
-         display:flex;
-        justify-content:center;
-        align-items:center;
-    } */
+    
     .host-image img{ 
         /* corrected */
         width:150px;
         height:150px;
         object-fit:cover;
         border-radius:50%;
-        /* padding-top: 24px; */
-        /* padding-left: 125px;
-        padding-bottom: 125px; */
     }
     /* -------------- */
     .host-meet-content{
